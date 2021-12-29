@@ -11,3 +11,102 @@
   text-transform: capitalize;
   transition: all 0.2s linear;
 }
+$green: #44bb6a;
+$black: #263238;
+$white: #fff;
+$light-color: #777;
+$yellow: #ff0;
+$light-bg: #f6f6f6;
+$border: 1rem solid #998;
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, mimax($val, 1fr));
+  gap: 2rem;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $green;
+  }
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: $green;
+  width: 30rem;
+  height: 100%;
+  padding: 3rem;
+
+  .logo {
+    font-size: 2.5rem;
+    color: $white;
+
+    i {
+      color: $yellow;
+    }
+  }
+  .navbar {
+    padding: 20% 0;
+
+    a {
+      display: block;
+      font-size: 2rem;
+      margin: 1.7rem 0;
+      color: $white;
+
+      i {
+        color: $yellow;
+        padding-right: 0.5rem;
+      }
+      &:hover {
+        color: $yellow;
+        i {
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+  .share {
+    text-align: center;
+
+    a {
+      height: 4.5rem;
+      width: 4.5rem;
+      line-height: 4.5rem;
+      font-size: 1.8rem;
+      background: $white;
+      color: $black;
+      margin: 0 0.3rem;
+
+      &:hover {
+        color: $white;
+        background: $black;
+      }
+    }
+  }
+  .credit {
+    text-align: center;
+    color: $white;
+    font-size: 1.5rem;
+    padding-top: 15%;
+
+    span {
+      color: $yellow;
+    }
+  }
+}
