@@ -42,6 +42,9 @@ html {
     background: $green;
   }
 }
+body {
+  padding-left: 30rem;
+}
 .header {
   position: fixed;
   top: 0;
@@ -108,5 +111,54 @@ html {
     span {
       color: $yellow;
     }
+  }
+}
+
+#menu-btn {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  background: $green;
+  color: $white;
+  cursor: pointer;
+  text-align: center;
+  z-index: 10000;
+  display: none;
+
+  &.fa-times {
+    background: $white;
+    color: $black;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  body {
+    padding-left: 0;
+  }
+  #menu-btn {
+    display: initial;
+  }
+  .header {
+    left: -120%;
+
+    &.active {
+      left: 0;
+      box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+      width: 35rem;
+    }
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
   }
 }
