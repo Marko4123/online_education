@@ -45,6 +45,25 @@ html {
 body {
   padding-left: 30rem;
 }
+section {
+  padding: 3rem 5%;
+  &:nth-child(even) {
+    background: $light-color;
+  }
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  color: $white;
+  background: $black;
+  font-size: 1.7rem;
+
+  &:hover {
+    background: $green;
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -132,6 +151,49 @@ body {
   &.fa-times {
     background: $white;
     color: $black;
+  }
+}
+.home {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .image {
+    flex: 1 1 40rem;
+
+    img {
+      width: 100%;
+    }
+  }
+  .content {
+    flex: 1 1 45rem;
+
+    span {
+      color: $green;
+      font-size: 2rem;
+    }
+
+    h3 {
+      color: $black;
+      font-size: 3rem;
+      padding: 2rem 0;
+
+      a {
+        color: $green;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $light-color;
+      padding-bottom: 1rem;
+      line-height: 2;
+    }
   }
 }
 
