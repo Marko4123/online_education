@@ -17,7 +17,7 @@ $white: #fff;
 $light-color: #777;
 $yellow: #ff0;
 $light-bg: #f6f6f6;
-$border: 1rem solid #998;
+$border: 0.1rem solid #998;
 
 @mixin grid($val) {
   display: grid;
@@ -48,7 +48,7 @@ body {
 section {
   padding: 3rem 5%;
   &:nth-child(even) {
-    background: $light-color;
+    background: $light-bg;
   }
 }
 .btn {
@@ -193,6 +193,40 @@ section {
       color: $light-color;
       padding-bottom: 1rem;
       line-height: 2;
+    }
+  }
+}
+.info-container {
+  @include grid(25rem);
+
+  .box {
+    padding: 3rem;
+    background: $white;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: $border;
+
+    i {
+      height: 5rem;
+      width: 5rem;
+      line-height: 5rem;
+      font-size: 2rem;
+      border-radius: 50%;
+      background: $green;
+      color: $white;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 2rem;
+      padding-bottom: 0.5rem;
+      color: $black;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $light-color;
     }
   }
 }
