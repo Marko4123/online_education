@@ -287,6 +287,39 @@ section {
   }
 }
 
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+
+  .image {
+    flex: 1 1 40rem;
+
+    img {
+      width: 100%;
+    }
+  }
+  .content {
+    flex: 1 1 45rem;
+    span {
+      font-size: 2rem;
+      color: $green;
+    }
+    h3 {
+      padding-top: 2rem;
+      font-size: 2.4rem;
+      color: $black;
+    }
+    p {
+      padding: 1.5rem 0;
+      line-height: 2;
+      font-size: 1.4rem;
+      color: $light-color;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
